@@ -1,4 +1,207 @@
-$bgColor: rgb(40, 82, 131);
-body{
-    background-color: $bgColor;
+@font-face{
+    font-family: Jurassic_Park;
+    src: url(../../assets/Jurassic_Park.woff2);
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+}
+
+$corDeFundo: #78866C;
+$corDeFundoSecundaria: #d9dddb;
+$corTexto: #000000;
+
+@mixin text($fontSize: 18px){
+    font-size: $fontSize;
+    font-family: Roboto, sans-serif;    
+    color: $corTexto;
+}
+
+@mixin title($fontSize: 150px) {
+    @include text($fontSize);
+    color: $corTexto;
+    font-family: Jurassic_Park, sans-serif; 
+}
+
+.text{
+    @include text;
+}
+
+.text--big {
+    @include text(24px);
+    
+    }
+
+.text--small{
+    @include text(16px)
+}
+
+.title{
+    @include title;
+}
+
+body {
+    margin: 0;
+    background-color: $corDeFundo;    
+}
+
+h1, h2, h3 {
+    margin: 20px 0;       
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background-color: $corDeFundoSecundaria;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+
+        &__menu {
+            display: flex;
+          }
+          li {
+            font-weight: bold;
+            margin-left: 24px;
+          }
+          li a {
+            color: $corTexto;
+            text-decoration: none;
+          }
+      }
+  }  
+
+.hero {
+    background-image: url('../../dist/images/Hero_JurassicPark.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    text-align: center;
+   
+    &__content h1 {
+        font-size: 4em;
+    }
+
+    &__content p {
+        //font-size: 1.5em;
+        margin-top: 800px;       
+        
+    }   
+}
+
+/* Seção de Personagens */
+.personagens__section {
+    padding: 50px 20px;
+    background-color: $corDeFundoSecundaria;
+    text-align: center;   
+}
+
+.personagens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__personagem {
+        width: 200px;        
+    }
+    
+    &__personagem img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    &__personagem h3 {
+        margin-top: 10px;
+    }
+
+}
+
+.momentos__section {
+    padding: 50px 20px;
+    background-color: $corDeFundo;
+    text-align: center;
+}
+
+.momentos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__momento {
+        width: 300px;
+    }
+    
+    &__momento img {
+        width: 100%;
+        border-radius: 20px;
+    }
+    
+    &__momento h3 {
+        margin-top: 20px;
+    }
+}
+
+.premios__section {
+    padding: 50px 20px;
+    background-color: $corDeFundoSecundaria;
+    text-align: center;
+}
+
+.premios__lista {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+
+     li {
+        font-size: 1.2em;
+        margin: 10px 0;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .personagens, .momentos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero__content p {
+        font-size: 1.2em;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: $corDeFundo;
+    color: $corTexto;
 }

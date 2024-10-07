@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="dist/css/main.css">
+    <title>Jurassic Park</title>
+    <link rel="icon" href=".\dist\images\Icon_jurassic.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/main.css">
 </head>
-<body>
-    <h1>Ola</h1>
+
+<header class="header">
+    <div class="header__container">        
+        <nav>
+            <ul class="text header__container__menu">
+                <li>
+                    <a href="#personagens">Personagens</a>
+                </li>
+                <li>
+                    <a href="#melhoresmomentos">Melhores Momentos</a>
+                </li>
+                <li>
+                    <a href="#premios">Prêmios Ganhos</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>    
+    <section class="hero">
+        <div class="hero__content">
+            <p class="title">Fansite do Filme</p>            
+        </div>
+    </section>
+
+    
+    <section id="personagens" class="personagens__section">
+        <h2 class="text--big">Personagens Principais</h2>
+        <div class="personagens">
+            <div class="personagens__personagem">
+                <img src="./dist/images/sam-neill.jpg" alt="Alan Grant">
+                <h3 class="text">Dr. Alan Grant</h3>
+                <p>Paleontólogo brilhante, líder da expedição.</p>
+            </div>
+            <div class="personagens__personagem">
+                <img src="./dist/images/laura-dern.jpg" alt="Ellie Sattler">
+                <h3 class="text">Dra. Ellie Sattler</h3>
+                <p>Paleobotânica e parceira de Alan Grant.</p>
+            </div>
+            <div class="personagens__personagem">
+                <img src="./dist/images/jeff-goldblum.jpg" alt="Ian Malcolm">
+                <h3 class="text">Dr. Ian Malcolm</h3>
+                <p>Matemático, especialista na teoria do caos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="melhoresmomentos" class="momentos__section">
+        <h2 class="text--big">Melhores Momentos</h2>
+        <div class="momentos">
+            <div class="momentos__momento">
+                <img src="./dist/images/Dinossauro_saiu.jpg" alt="Tiranossauro">
+                <h3 class="text">O Tiranossauro Escapa</h3>
+                <p>A emocionante cena onde o Tiranossauro foge de seu cercado.</p>
+            </div>
+            <div class="momentos__momento">
+                <img src="./dist/images/velociraptos_cacan.jpg" alt="Velociraptors">
+                <h3 class="text">Os Velociraptors Caçam</h3>
+                <p>O momento de puro terror em que os Velociraptors perseguem os heróis.</p>
+            </div>
+            <div class="momentos__momento">
+                <img src="./dist/images/Briga.jpg" alt="Clímax">
+                <h3 class="text">O Clímax</h3>
+                <p>A épica batalha final entre o Tiranossauro e os Velociraptors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="premios" class="premios__section">
+        <h2 class="text--big">Prêmios Ganhos</h2>
+        <ul class="premios__lista text">
+            <li>Oscar de Melhores Efeitos Visuais (1994)</li>
+            <li>Oscar de Melhor Som (1994)</li>
+            <li>BAFTA de Melhores Efeitos Visuais (1994)</li>
+            <li>Prêmio Saturno de Melhor Filme de Ficção Científica (1994)</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jurassic Park Fanpage</p>
+    </footer>
 </body>
 </html>
